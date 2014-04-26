@@ -14,5 +14,5 @@ Food-for-Party
 ![Alt text](FFP.png)
 
 ## Authors ##
- 1. Lishchuk Irina
- 2. Kuzmenko Anastasia
+ 1. [Irina Lishchuk](https://github.com/irinalishchuk)
+ 2. [Anastasia Kuzmenko](https://github.com/kuzmenkolishchuk)
