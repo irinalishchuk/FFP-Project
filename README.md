@@ -14,4 +14,4 @@ Food-for-Party
  2. Kuzmenko Anastasia
 
 # Uml diagram #
-![Alt text](FFP.PNG)
+![Alt text](FFP.png)
