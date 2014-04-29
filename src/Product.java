@@ -1,18 +1,57 @@
 import java.util.Vector;
 
-public class Product extends Dish {
+public class Product {
 
-  public Integer Amount;
+    private int amount;
+    private float price;
 
-  public Float Price;
+    public String getName() {
+        return name;
+    }
 
-  public String Name;
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public String Dimension;
+    private String name;
+    private String dimension;
 
-    public Vector  myDish;
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
+    }
 
-  public void ProductsPrice() {
-  }
+    public Product(String name, int amount, float price, String dimension) {
+        this.amount = amount;
+        this.price = price;
+        this.name = name;
+        this.dimension = dimension;
+    }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public float productsPrice() {
+        return this.price * this.amount;
+    }
+
+    public String getDimension() {
+        return dimension;
+    }
+
+    public String toString() {
+        return this.getName();
+    }
 }

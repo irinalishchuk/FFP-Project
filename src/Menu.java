@@ -1,19 +1,49 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
-public class Menu extends User {
+public class Menu {
 
-  public List Dishes;
+    public boolean isChildMenu() {
+        return childMenu;
+    }
 
-  public Integer Price;
+    public void setChildMenu(boolean childMenu) {
+        this.childMenu = childMenu;
+    }
 
-  public Boolean ChildMenu;
+    private boolean childMenu;
 
-    public Vector  myChaildMenu;
-    public Vector  myAdultMenu;
-    public Vector  myDish;
-    public Vector  myDish;
+    public Menu(ArrayList<Dish> dishes) {
+        this.dishes = dishes;
+    }
 
-  public void calculateManuPrice() {
-  }
+    private ArrayList<Dish> dishes;
+
+    public Menu() {
+    }
+
+
+    public float calculateMenuPrice() {
+        float sum = 0;
+        for (int i = 0; i < dishes.size(); i++) {
+            sum += dishes.get(i).calculatePrice();
+        }
+        return sum;
+    }
+
+    public void writeMenuToFile() {
+        try {
+            FileWriter writer = new FileWriter("menu.txt");
+            for (Dish dish: dishes) {
+                writer.write(dish.toString());
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("IO Exception!");
+        }
+    }
 
 }
