@@ -1,2 +1,2 @@
-public class VegFr {
+public class VegFr extends Product, Product {
 }

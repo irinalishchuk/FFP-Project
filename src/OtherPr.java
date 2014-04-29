@@ -1,2 +1,2 @@
-public class OtherPr {
+public class OtherPr extends Product, Product {
 }

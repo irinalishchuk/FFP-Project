@@ -8,8 +8,6 @@ public class Menu extends User {
 
   public Boolean ChildMenu;
 
-  public Boolean AduktMenu;
-
     public Vector  myChaildMenu;
     public Vector  myAdultMenu;
     public Vector  myDish;
