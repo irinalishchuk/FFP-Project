@@ -20,7 +20,15 @@ public class TestClass {
         User Ira = new User("Iren", 19, "lol");
         Ira.setProducts(base);
         Ira.addDish(russianDish);
-        Ira.addDishToMenu(russianDish);
-        menu.writeMenuToFile();
+
+        menu.setChildMenu(true);
+        try {
+            menu.addDishToMenu(russianDish);
+            menu.writeMenuToFile();
+        }
+        catch (AlcoChildException e){
+            System.out.println("Please don't kill your child!");
+        }
+
     }
 }
