@@ -23,6 +23,8 @@ public class Menu {
     private ArrayList<Dish> dishes;
 
     public Menu() {
+        this.childMenu = false;
+        dishes = new ArrayList<Dish>();
     }
 
 
@@ -43,6 +45,17 @@ public class Menu {
             writer.close();
         } catch (IOException e) {
             System.out.println("IO Exception!");
+
+        }
+
+    }
+
+    public void addDishToMenu(Dish dish) throws AlcoChildException {
+        if (dish.isAlcoDish()) {
+            throw new AlcoChildException("Forbidden!");
+        }
+        else {
+            dishes.add((Dish) dish);
         }
     }
 
