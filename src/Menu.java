@@ -23,6 +23,8 @@ public class Menu {
     private ArrayList<Dish> dishes;
 
     public Menu() {
+        this.childMenu = false;
+        dishes = new ArrayList<Dish>();
     }
 
 
@@ -46,4 +48,12 @@ public class Menu {
         }
     }
 
+    public void addDishToMenu(Dish dish) throws AlcoChildException {
+        if (dish.isAlcoDish()) {
+            throw new AlcoChildException("Forbridden!");
+        }
+        else {
+           dishes.add((Dish) dish);
+        }
+    }
 }

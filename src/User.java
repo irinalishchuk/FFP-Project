@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class User {
 
@@ -75,10 +76,6 @@ public class User {
     }
 
     public void addDish(Dish dish) {
-        dishes.add(dish);
-    }
-
-    public void addDishToMenu(Dish dish) {
         dishes.add(dish);
     }
 
