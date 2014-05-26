@@ -79,4 +79,9 @@ public class User {
         dishes.add(dish);
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3450e817d17605f464eef155486ea52715ea497d
 }

@@ -8,15 +8,30 @@ public class Dish extends Menu {
     private String name;
 
     public boolean isAlcoDish() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3450e817d17605f464eef155486ea52715ea497d
         return alcoDish;
     }
 
     public void setAlcoDish(boolean alcoDish) {
+<<<<<<< HEAD
         this.alcoDish = alcoDish;
     }
 
     private boolean alcoDish;
 
+=======
+
+        this.acloDish = acloDish;
+    }
+    private boolean alcoDish;
+
+
+
+
+>>>>>>> 3450e817d17605f464eef155486ea52715ea497d
     public String getName() {
         return name;
     }
@@ -28,10 +43,16 @@ public class Dish extends Menu {
     public Dish(String name, ArrayList<Product> products) {
         this.products = products;
         this.name = name;
+<<<<<<< HEAD
 
         for (Product product: products) {
             if (product instanceof AlcoDrinks)  {
                 alcoDish = true;
+=======
+        for (Product product: products) {
+            if (product instanceof AlcoDrinks){
+                acloDish = true;
+>>>>>>> 3450e817d17605f464eef155486ea52715ea497d
                 break;
             }
         }

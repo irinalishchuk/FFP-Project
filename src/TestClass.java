@@ -25,8 +25,14 @@ public class TestClass {
         try {
             menu.addDishToMenu(russianDish);
             menu.writeMenuToFile();
+<<<<<<< HEAD
         } catch (AlcoChildException e) {
             System.out.println("Please don't kill your child");
+=======
+        }
+        catch (AlcoChildException e){
+            System.out.println("Please don't kill your child!");
+>>>>>>> 3450e817d17605f464eef155486ea52715ea497d
         }
 
     }
