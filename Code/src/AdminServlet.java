@@ -32,4 +32,20 @@ public class AdminServlet extends HttpServlet {
         view.forward(request, response);
     }
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        User user = new User();
+
+        user.setUsername(request.getParameter("username_add"));
+        user.setPassword(request.getParameter("pass_add"));
+        user.setFirstName(request.getParameter("firstname_add"));
+        user.setLastName(request.getParameter("lastname_add"));
+
+        dao.addUser(user);
+
+        RequestDispatcher view = request.getRequestDispatcher(LIST_USERS);
+        request.setAttribute("users", dao.getAllUsers());
+        view.forward(request, response);
+    }
+
 }
