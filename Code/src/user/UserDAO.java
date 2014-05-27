@@ -5,7 +5,6 @@ import MealPackage.product.Product;
 
 import java.util.ArrayList;
 
-
 public class UserDAO {
 
     public static ArrayList<User> users = new ArrayList<User>() {{
