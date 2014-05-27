@@ -11,14 +11,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>EDOKI UTD</title>
+    <title>FOOD PROJECT</title>
 </head>
 <body>
 
 <% ProductDao productDao = new ProductDao(); %>
 <% DishDao dishDao = new DishDao(); %>
 
-<h1>ZHRA4KA</h1>
+<h1>FOOD PROJECT</h1>
     <% User currentUser = (User)(session.getAttribute("currentSessionUser"));%>
     Welcome, <b><%= currentUser.getFirstName()%> <%=currentUser.getLastName()%></b>
 <br>
