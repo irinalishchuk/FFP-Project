@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class DishServlet extends HttpServlet {
     private static String INSERT_OR_EDIT_PRODUCT = "/editproduct.jsp"; // user
     private static String LIST_PRODUCT = "/loggedIn.jsp"; // listuser
@@ -51,12 +50,17 @@ public class DishServlet extends HttpServlet {
 
         ArrayList<Product> products = new ArrayList<>();
 
+        System.out.println("PRODUCTS TO DISH STRING" + request.getParameter("products_to_dish"));
         List<String> productNames = Arrays.asList((request.getParameter("products_to_dish").split(",")));
+        for (String s: productNames) {
+            System.out.println("PRODUCTS TO DISH 1by1:" + s);
+        }
 
         for (int i = 0; i < productNames.size(); i++) {
             Product product = ProductDao.getProductByName(productNames.get(i));
             products.add(product);
         }
+
 
         Dish dish = new Dish(request.getParameter("new_dish_name"), products);
         dao.addDish(dish);
