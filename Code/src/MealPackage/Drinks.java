@@ -1,5 +1,7 @@
 package MealPackage;
 
+import MealPackage.product.Product;
+
 public class Drinks extends Product implements Mixable{
 
     public Drinks(String name, int amount, float price, String dimension) {
