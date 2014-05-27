@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class ProductServlet extends HttpServlet {
     //private static String INSERT_OR_EDIT_PRODUCT = "/editproduct.jsp"; // user
-
     private static String LIST_PRODUCT = "/loggedIn.jsp"; // listuser
     private ProductDao dao;
 
